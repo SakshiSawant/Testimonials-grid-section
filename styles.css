@@ -21,9 +21,9 @@ body{
 }
 
 .card{
-    border: 2px solid #000000;
     padding: 1em;
     border-radius: 1em;
+    box-shadow: 0.2em 0.2em #666666;
 }
 
 .card__info{
@@ -39,11 +39,54 @@ body{
 .card__title{
     position: absolute;
     display: inline-block;
+    font-weight: normal;
 }
 
 .card__subtitle{
     position: absolute;
     display: inline-block;
+    font-weight: normal;
     top: 50%;
+    opacity: 50%;
+}
+
+.card--moderate-violet{
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card--dark-gray{
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card--dark{
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card__para{
+    font-size: 1.1rem;
+    padding: 0.2em 0em;
+}
+
+.card__quote{
+    margin: 1.5em 0em;
+    opacity: 70%;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 600px){
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .card--horizontal{
+        grid-column: span 2;
+    }
 }
 
